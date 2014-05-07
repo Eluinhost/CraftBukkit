@@ -590,9 +590,7 @@ public abstract class EntityLiving extends Entity {
         return heal(f, EntityRegainHealthEvent.RegainReason.CUSTOM);
     }
 
-    // CraftBukkit start - return true if heal was not cancelled or false if heal was cancelled
     public boolean heal(float f, EntityRegainHealthEvent.RegainReason regainReason) {
-        // CraftBukkit end
         float f1 = this.getHealth();
 
         if (f1 > 0.0F) {
@@ -603,11 +601,12 @@ public abstract class EntityLiving extends Entity {
                 this.setHealth((float) (this.getHealth() + event.getAmount()));
             }
 
-            return !event.isCancelled(); // CraftBukkit
+            return !event.isCancelled();
         }
 
-        return true; // CraftBukkit
+        return true;
     }
+    // CraftBukkit end
 
     public final float getHealth() {
         // CraftBukkit start - Use unscaled health

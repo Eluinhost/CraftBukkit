@@ -600,10 +600,8 @@ public abstract class EntityLiving extends Entity {
             if (!event.isCancelled()) {
                 this.setHealth((float) (this.getHealth() + event.getAmount()));
             }
-
             return !event.isCancelled();
         }
-
         return true;
     }
     // CraftBukkit end

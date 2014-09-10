@@ -24,18 +24,20 @@
     <url>https://github.com/Bukkit/CraftBukkit</url>
   </scm>
 
-  <distributionManagement>
-    <repository>
-      <id>repobo-rel</id>
-      <name>repo.bukkit.org Releases</name>
-      <url>http://repo.bukkit.org/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>repobo-snap</id>
-      <name>repo.bukkit.org Snapshots</name>
-      <url>http://repo.bukkit.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>publicuhc.releases</id>
+            <url>http://nexus.publicuhc.com/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>publicuhc.snapshots</id>
+            <url>http://nexus.publicuhc.com/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <site>
+            <id>publicuhc.sites</id>
+            <url>dav:http://nexus.publicuhc.com/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</url>
+        </site>
+    </distributionManagement>
 
   <repositories>
     <repository>
